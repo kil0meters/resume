@@ -1,0 +1,126 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Miles Benton}}\\
+	San Jose, CA $\cdot$ milesbenton@gmail.com $\cdot$ (408) 300-2968 $\cdot$ https://github.com/kil0meters\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{California State University, Chico}\hfill Chico, CA\\
+BS Computer Science \textit{GPA: 3.7} \hfill Aug 2021 - (May 2024)\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Association for Computing Machinery, Chico Chapter} \hfill Chico, CA\\
+\textit{Vice President} \hfill Apr 2022 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Grew club from 4 active members to over 30.
+	\item Created custom tooling to host programming competitions and weekly meetings.
+\end{itemize}
+
+\header{Projects}
+{\textbf{chicoacm.org}} {\sl TypeScript, NextJS, Rust, WebAssembly, Docker, SQLite} \hfill https://github.com/kil0meters/acm\\
+A competitive programming website with a focus on deterministic performance analysis.\\
+\vspace*{2mm}
+{\textbf{SketchNexus}} {\sl TypeScript, SolidJS, WebSockets} \hfill https://sketchnexus.com\\
+An online competitive drawing website featuring realtime communication via WebSockets.\\
+\vspace*{2mm}
+{\textbf{Snail++}} {\sl Rust, WebAssembly, TypeScript} \hfill https://github.com/kil0meters/snailplusplus\\
+An incremental game simulating the generation and solving of thousands of mazes in real time using highly optimized code.\\
+\vspace*{2mm}
+
+\header{Technical Skills}
+\begin{tabular}{ l l }
+	Programming Languages:    & Rust, C++, WebAssembly, TypeScript, SQL, Python \\
+	Frameworks and Libraries: & React, NextJS, SolidJS, Actix                   \\
+	Tools:                    & Git, Linux, Docker, SQLite, JWT, OAuth, CI/CD   \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Awards}
+\textbf{Dean\textquotesingle{}s List} \hfill California State Univeristy, Chico\\
+\hfill 2021/2022/2023\\
+\vspace*{2mm}
+\textbf{Chico Programming Competition} \hfill Association for Computing Machinery\\
+Second Place \hfill Apr 2022\\
+\vspace*{2mm}
+
+\ 
+\end{document}
